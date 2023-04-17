@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Button} from 'react-native';
+import {View, Button, StyleSheet} from 'react-native';
 import notifee from '@notifee/react-native';
 
 const HomeScreen = () => {
@@ -22,12 +23,20 @@ const HomeScreen = () => {
   }
 
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View style={styles.container}>
       <Button
         onPress={() => onDisplayNotification()}
-        title={'Notifee'}></Button>
+        title={'Notifee'} />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default HomeScreen;
